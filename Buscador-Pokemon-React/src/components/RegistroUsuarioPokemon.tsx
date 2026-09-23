@@ -8,7 +8,7 @@ export const RegistroUsuario: React.FC = () => {
 
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
-    const [tipoDoc, setTipoDoc] = useState('CC');
+    const [tipoDocumento, setTipoDoc] = useState('CC');
     const [dni, setDni] = useState('');
     const [fechaNacimiento, setFechaNacimiento] = useState('');
     const [correo, setCorreo] = useState('');
@@ -35,8 +35,25 @@ export const RegistroUsuario: React.FC = () => {
         registrarEntrenador(nuevo);
         navigate('/pokemon');
     };
-        return;
         
-    };
+  return (
+    <div>
+      <header>
+        <h2> Registro de Entrenadores </h2>
+      </header>
 
+      
+    <div>
+      <form onSubmit={eventoSubmit}> 
+          <div>
+            <label> nombre: </label>
+          </div>
+     
+      </form>
+    </div>
+
+    </div>
+  );
+
+};
 
